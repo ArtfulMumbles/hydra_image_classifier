@@ -1,0 +1,16 @@
+# default config
+defaults:
+ - dataset: cifar10
+ - model: simple_cnn
+ - optimizer: adam
+
+# training settings
+batch_size: 64 # batch size
+epochs: 5 # num_epochs
+learning_rate: 1e-4 # learning rate
+train_val_proportion: 0.2 
+
+# other parameters
+random_seed: 42
+output_dir: ./outputs
+
