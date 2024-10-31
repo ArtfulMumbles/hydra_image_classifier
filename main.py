@@ -11,7 +11,7 @@ from tqdm import tqdm
 @hydra.main(config_path="config", config_name="config", version_base="1.1")
 def main(cfg: DictConfig):
     # torch device
-    device =  if torch.cuda.is_available() else "cpu"
+    device = "gpu" if torch.cuda.is_available() else "cpu"
     # use config to get dataset
     transform = transforms.Compose([transforms.ToTensor()])
     if cfg.dataset.name == "cifar10":
